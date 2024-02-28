@@ -126,3 +126,41 @@ for (let i = 0; i < 10; i++) {
 }
 
 console.log(arr);
+
+// variables
+
+var lastname = "Doeir";
+// global function does not need to use object name
+console.log(lastname);
+console.log(window.lastname);
+console.log(globalThis.lastname);
+
+function alrt() {
+  window.alert(lastname);
+  globalThis.alert(lastname);
+}
+
+console.log(window);
+console.log(globalThis);
+
+// === variable scope
+
+function greeting() {
+  var friend = "Johnny";
+  console.log("Hello buddy " + friend);
+  function bondQuestions() {
+    var secret = "Scored!";
+    console.log(friend + " how was your last night?");
+    console.log("Secret is : " + secret);
+    function deepQuestions() {
+      var doNotTell = "Sarah";
+      console.log("Was this " + doNotTell + "?");
+    }
+    deepQuestions();
+    // greeting(); // recursive
+  }
+  bondQuestions();
+  deepQuestions(); // ?? scope
+}
+
+greeting();
