@@ -108,5 +108,3 @@ let ages = [11, 3, 13, 16, 32, 11, 9, 103];
 
 console.log(ages.findIndex((e) => e > 18));
 console.log(ages.find((e) => e > 18));
-
-// === spread
