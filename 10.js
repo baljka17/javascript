@@ -69,7 +69,7 @@ mod(1234);
 
 let person = {
   name: "John Doe",
-  age: "19",
+  age: 19,
   hobby: "Skiing",
   address: {
     city: "London",
@@ -85,10 +85,9 @@ console.log(person.name);
 console.log(person["name"]);
 console.log(person["hobby"]);
 
-var indx = "name";
-console.log(person[indx]);
-console.log(person[indx].address);
 var prop = "address";
+console.log(person[prop]);
+console.log(person[prop].city);
 var prop1 = "city";
 console.log(person[prop][prop1]);
 
@@ -111,12 +110,12 @@ var tags = new Array("h1", "div", null, "aside");
 
 console.log(languages[1]);
 console.log(languages.push("typescipt"));
-languages[7] = "kotlin";
+languages[languages.length] = "kotlin";
 console.log(languages);
 console.log(languages.indexOf("Java"));
 console.log(languages.indexOf("js"));
 
-console.log(languages.slice(2, 5));
+console.log(languages.slice(1, 5));
 console.log(languages.splice(2, 2));
 
 var part = languages.slice(4, 6);

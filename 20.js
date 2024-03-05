@@ -1,6 +1,6 @@
 // === for loop && generally about loops
 
-var array = ["a", "b", "cc"];
+var array = ["a", "b", "cc"]; // fn([...array])
 array.forEach((element) => {
   console.log(element);
 });
@@ -103,7 +103,6 @@ console.log(typeof true);
 console.log(typeof undefined);
 console.log(typeof null);
 console.log(typeof 123);
-console.log(typeof 123);
 
 // === exception handling
 
@@ -113,6 +112,8 @@ try {
   // let x = prompt("Your value from input?");
 } catch (error) {
   console.log("Prompt only works from browsers!");
+} finally {
+  console.log("Holy god!");
 }
 
 // === Math class
@@ -155,6 +156,7 @@ function greeting() {
     function deepQuestions() {
       var doNotTell = "Sarah";
       console.log("Was this " + doNotTell + "?");
+      console.log("Was this " + friend + "?");
     }
     deepQuestions();
     // greeting(); // recursive

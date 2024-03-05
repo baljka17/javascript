@@ -2,7 +2,7 @@
 
 // take input from the user
 // const number = parseInt(prompt("Enter an integer: "));
-const number = 12;
+const number = 12; // 132 + "1" = 133, "1"+ 123 = "1123"
 
 //creating a multiplication table
 for (let i = 1; i <= 5; i++) {

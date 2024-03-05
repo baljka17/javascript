@@ -35,7 +35,7 @@ massive[2]();
 // ===
 function prepareAgain() {
   var arr = [];
-  for (var i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i++) {
     arr.push(
       (function (j) {
         return function () {

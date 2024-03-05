@@ -38,7 +38,7 @@ xContext(); // undefined :: hoisted
 function xContext() {
   console.log("this is a function");
 }
-console.log(yContext);
+console.log(yContext + " asdfasdf");
 var yContext;
 function yContext() {
   console.log("this is a function");
@@ -63,11 +63,12 @@ function printInfo(name, age, region, position) {
 printInfo();
 printInfo("John Doe", 33, "Pasific", "Software Developer");
 
-// === this key
+// === "this" key
 console.log(this);
 function aFunc() {
   console.log(this);
 }
+aFunc();
 
 var obj = {
   name: "Test",

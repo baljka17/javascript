@@ -14,7 +14,9 @@ function change(f, s, t) {
   console.log(t);
 }
 
-// === rest arguments
+// === Rest arguments
+
+// es5
 function printAge() {
   let arr = Array.prototype.slice.call(arguments);
   console.log(arr);
@@ -24,13 +26,14 @@ function printAge() {
 }
 printAge(1992, 2003, 1988);
 
+// es6
 function printAge6(...years) {
-  console.log("rest arguments");
+  console.log("Rest arguments");
   years.forEach((e) => console.log(e));
 }
 
 function printAge6(sex, ...years) {
-  console.log("rest arguments");
+  console.log("Rest arguments");
   console.log(sex);
   years.forEach((e) => console.log(e));
 }
@@ -77,6 +80,9 @@ dict.set("name", "нэр");
 dict.set("car", "машин");
 dict.set("software", "програм");
 dict.set(1, "нэг");
+dict.set(2, "хоёр");
+dict.set(22, "хоёр");
+dict.set(2, "хоёр");
 dict.set(2, "хоёр");
 
 dict.forEach((value, key) => console.log(key + " === " + value));
@@ -132,7 +138,7 @@ Income.getCurrencyRate();
 
 // === reduce - retunrs one value only
 
-let values = [10, 20, 30, 49, 256, 53, 12, 9];
+let values = [10, 20, 30, 49, 256, 100, 53, 12, 9];
 let sum = 0;
 
 // 1.
@@ -148,12 +154,14 @@ for (let e of values) {
 
 // 3
 sum = 0;
-values.forEach((e) => (sum = sum + e));
+values.forEach((e) => (sum += e));
 
 // 4
-sum = values.reduce((a, b) => a + b);
+sum = values.reduce((sum, b) => sum + b, 0);
+// sum = values.reduce((sum, b) => sum + b);
+// sum = values.forEach(add, a, b);
 // function add(a, b) {return a + b;}
-console.log(sum);
+console.log("SUM :: " + sum);
 
 console.log("Max: " + values.reduce((a, b) => (a > b ? a : b)));
 console.log("Min: " + values.reduce((a, b) => (a < b ? a : b)));
@@ -213,7 +221,7 @@ console.log(
 const first = () => {
   console.log("Greeting from the first function.");
   second();
-  console.log("Goodbye the first fucntion.");
+  console.log("Goodbye the first function.");
 };
 
 const second = () => {

@@ -6,6 +6,7 @@
 // JavaScript manipulates the DOM
 console.log(document);
 console.log(document.getElementsByTagName("h2"));
+console.log(document.getElementsByTagName("h2")[0].innerHTML);
 console.log(document.getElementsByTagName("div"));
 console.log(document.getElementById("special"));
 const target = document.getElementById("spcecial");
@@ -17,14 +18,17 @@ document.querySelector("#clickme").addEventListener("click", function () {
   console.log("You clicked me!");
 });
 
+console.log(document.getElementsByTagName("p"));
 // callback & anonymous
 
 // 1. function = higher order function
-// 2. pass function to function // callback
+// 2. pass function as an argument = callback
 function hello() {
+  // back function body
   console.log("Hello fellas!");
 }
 function greet(callback) {
+  // higher order function
   callback();
 }
 greet(hello); // passing callback

@@ -68,6 +68,7 @@ console.log(doctor.__proto__.__proto__.__proto__); // prototype chaining
 console.log(item.__proto__);
 console.log(human.__proto__);
 console.log(doctor.__proto__);
+console.log(doctor.weight());
 
 human.func();
 doctor.func();
@@ -125,7 +126,11 @@ var customImg = {
 };
 
 // Bind / copy all behaviors // function curring aka add default argument
-var mySuperImageIdentifier = img.imageIdentify.bind(customImg, "yellow", "big");
+var mySuperImageIdentifier = img.imageIdentify.bind(
+  customImg,
+  "yellow0000",
+  "big",
+);
 mySuperImageIdentifier();
 
 // Call / direct call
@@ -165,7 +170,7 @@ Math;
 Math.floor;
 Math.ceil;
 
-// === function passing argument
+// === function passing argument // callback
 
 var birthYears = [1922, 2003, 2010, 1983, 1998, 2021, 2000];
 

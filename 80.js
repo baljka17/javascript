@@ -1,6 +1,6 @@
 // ===
 
-let name = "Jonh";
+let name = "John";
 let position = "software developer";
 let job = "MicroSoft";
 
@@ -29,7 +29,7 @@ let str = `${name} is a ${position} at ${job}.`;
 console.log(str);
 
 console.log(name.startsWith("J"));
-console.log(job.endsWith("t."));
+console.log(str.endsWith("t."));
 console.log(job.repeat(6));
 
 // === Arrow functions
@@ -74,7 +74,7 @@ let human = {
 human.greeting();
 human.info();
 
-// === ES6 object distruct
+// === ES6 object destruct
 var arr = ["Steven", 23, "Address, City, Country", "Software developer"];
 
 // var firstName = arr[0];
