@@ -10,8 +10,8 @@ a.push(function () {
     console.log("I am inner inner function.");
   };
 });
-console.log(a);
-console.log(a[1]);
+// console.log(a);
+// console.log(a[1]);
 console.log(a[2]());
 console.log(a[2]()());
 
@@ -35,7 +35,7 @@ massive[2]();
 // ===
 function prepareAgain() {
   var arr = [];
-  for (let i = 0; i < 3; i++) {
+  for (var i = 0; i < 3; i++) {
     arr.push(
       (function (j) {
         return function () {

@@ -62,6 +62,7 @@ doctor.func = function () {
 var pedestrian = Object.create(human);
 pedestrian.name = "A guest";
 
+// a{} <= b{} <= Object = null
 console.log(item.__proto__);
 console.log(human.__proto__.__proto__);
 console.log(doctor.__proto__.__proto__.__proto__); // prototype chaining
@@ -113,7 +114,7 @@ var img = {
   content: "ocean front",
   imageIdentify: function (color, size = "small") {
     console.log(
-      "This image is about " + color + " " + size + " " + this.content,
+      "===== This image is about " + color + " " + size + " " + this.content,
     );
   },
 };
@@ -121,14 +122,14 @@ var img = {
 img.imageIdentify("blue");
 
 var customImg = {
-  file: "/path/to/another/image.jpg",
-  content: "dog",
+  src: "/path/to/another/image.jpg",
+  content: "Horse",
 };
 
-// Bind / copy all behaviors // function curring aka add default argument
+// Bind / copy all behaviors + links new "this" // function curring aka add default argument
 var mySuperImageIdentifier = img.imageIdentify.bind(
   customImg,
-  "yellow0000",
+  "yellow 98760000",
   "big",
 );
 mySuperImageIdentifier();
@@ -136,7 +137,7 @@ mySuperImageIdentifier();
 // Call / direct call
 img.imageIdentify.call(customImg, "white");
 
-// Apply
+// Apply = call + arr[arguments]
 var args = ["black", "huge"];
 img.imageIdentify.apply(customImg, args);
 
@@ -146,6 +147,9 @@ function Material(color, price) {
   // contrunct starts with Capital letter, syntatic sugar
   this.color = color;
   this.price = price;
+  // view = function () {
+  //   console.log("This material is " + this.color);
+  // };
 }
 
 Material.prototype.view = function () {

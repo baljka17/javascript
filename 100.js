@@ -81,7 +81,7 @@ function getWeather(id) {
 
 // getWeather(2487956);
 
-// === Modular dev
+// === Modular development = MVC
 
 // === webpack
 // Optimize js files - asset management
